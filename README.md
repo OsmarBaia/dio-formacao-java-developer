@@ -78,3 +78,5 @@ public class ContaTerminal {
 }
 ```
 
+### Extra - Interface
+<img width="955" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/e8da753a-9186-4797-8b8b-604bcd682d62">
