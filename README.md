@@ -2,23 +2,50 @@
 
 <img align="left" height="320rem" alt="Badge Formação Java Developer" src="https://hermes.dio.me/tracks/da6041a9-80ef-409e-bd50-5e7be4dfadf6.png"/>
 
-## Resumo
-  O curso visa ensinar os fundamentos da liguagem Java, explorando a sintaxe e conceitos básicos, programação orientada a objetos, estruturas de dados, algoritmos e desenvolvimento web utilizando Servlets, JSP e o padrão MVC. Também proporciona domínio de frameworks como Spring e Spring Boot, integração de banco de dados com Spring Data JPA e implementação de segurança com Spring Security. Ensina habilidades em testes unitários com JUnit e Mockito, práticas de TDD e controle de versão com Git. Durante o curso executei a criação de aplicações simples até sistemas complexos, desenvolvem APIs RESTful, gerenciam bancos de dados relacionais, realizam testes automatizados e implementam interfaces de usuário. Além disso, aprendem a configurar projetos em Maven e Gradle, realizar deploy em servidores como Tomcat e monitorizar aplicações em produção, garantindo a segurança e eficiência dos sistemas desenvolvidos.
+## 1️⃣ Simulando Uma Conta Bancária Através Do Terminal/Console
+O projeto ContaBanco, implementado na classe ContaTerminal.java, visa receber dados via terminal, como número da conta, agência, nome do cliente e saldo. Os dados serão inseridos pelo usuário conforme solicitado pelo programa, utilizando a classe Scanner para captura. As variáveis devem ser declaradas conforme suas respectivas regras: número da conta (inteiro), agência (texto), nome do cliente (texto) e saldo (decimal). Após a inserção dos dados, o programa exibirá uma mensagem de agradecimento ao cliente, concatenando as informações inseridas. Por exemplo: "Olá [Nome Cliente], obrigado por criar uma conta em nosso banco, sua agência é [Agencia], conta [Numero] e seu saldo [Saldo] já está disponível para saque".
 
-## Projetos
+<br><br>
 
-| Desafio | Descrição | Branch | 
-| ------------- | ------------- | ------------- |
-| 1. Simulando uma Conta Bancária Através do Terminal/Console | Elaborar uma aplicação simples, que receba entradas do usuário através do terminal e depois forneça uma saída customizada. | []() |
-| 2. Criando um Pequeno Sistema para Validação de Processo Seletivo | Elaborar uma aplicação simples, que receba duas entradas do usuário, valide as entradas e, com base na validação, execute a chamada de uma função específica ou lance uma exceção customizada. | []() |
-| 3. Modelando o iPhone com UML: Funções de Músicas, Chamadas e Internet | Modelar e diagramar a representação UML do componente iPhone, abrangendo suas funcionalidades como reprodutor musical, aparelho telefônico e navegador na internet. | []() |
-| 4. Abstraindo um Bootcamp Usando Orientação a Objetos em Java | Colocar em prática as principais ferramentas da OO: abstração, encapsulamento, herança e polimorfismo, através da criação de uma aplicação "bootcamp". | []() |
-| 5. Conhecendo Spring Data JPA na Prática com Java | Colocar em prática os conceitos de ORM usando Spring Data JPA, através da criação de uma API RestFul no domínio de uma academia de ginástica. | []() |
+## O Que deve ser utilizado
 
-## Certificado
++ Lógica de programação e POO;
++ Conhecimentos básicos em Java;
++ Computador com SO de sua preferência(Windows, Linux, Mac OS);
++ IDE (Visual Studio Code, Eclipse, etc);
 
-<div align="center">
+## Objetivo
 
+Vamos exercitar todo o conteúdo apresentado no módulo de Sintaxe codificando o seguinte cenário.
 
+1. Crie o projeto ContaBanco que receberá dados via terminal contendo as características de conta em banco conforme atributos abaixo:
+2. Dentro do projeto, crie a classe ContaTerminal.java para realizar toda a codificação do nosso programa.
+>[!TIP]
+> Revise sobre regras de declaração de variáveis
 
-</div>
+| Atributo       | Tipo    | Exemplo       |
+| -------------  | ------- | ------------- |
+| Numero         | Inteiro | 1021          |
+| Agencia        | Texto   | 067-8         |
+| Nome Cliente   | Texto   | MARIO ANDRADE |
+| Saldo          | Decimal | 237.48        |
+
+>[!TIP]
+> Revise sobre terminal, main args e a classe Scanner
+
+2. Permita que os dados sejam inseridos via terminal sendo que o usuário receberá a mensagem de qual informação será solicitada, exemplo:
+   
+  + Programa: "Por favor, digite o número da Agência !"
+  + Usuário: 1021 (depois ENTER para o próximo campo)
+    
+> [!TIP]
+> Revise sobre concatenação e classe String com método concat
+
+3. Depois de todas as informações terem sido inseridas, o sistema deverá exibir a seguinte mensagem:
+*"Olá [Nome Cliente], obrigado por criar uma conta em nosso banco, sua agência é [Agencia], conta [Numero] e seu saldo [Saldo] já está disponível para saque".*
+
+Os campos em [ ] devem ser alterados pelas informações que forem inseridas pelos usuários.
+
+## Projeto
+![]()
+
