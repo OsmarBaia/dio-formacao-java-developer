@@ -1,17 +1,9 @@
 # Formação Java Developer
-<div align="center">
-  <img align="left" height="300rem" alt="Badge Formação Java Developer" src="https://hermes.dio.me/tracks/da6041a9-80ef-409e-bd50-5e7be4dfadf6.png"/>
-  
-  <div align="left">    
-    
+
+<img align="left" height="320rem" alt="Badge Formação Java Developer" src="https://hermes.dio.me/tracks/da6041a9-80ef-409e-bd50-5e7be4dfadf6.png"/>
+
 ## Resumo
-
   O curso visa ensinar os fundamentos da liguagem Java, explorando a sintaxe e conceitos básicos, programação orientada a objetos, estruturas de dados, algoritmos e desenvolvimento web utilizando Servlets, JSP e o padrão MVC. Também proporciona domínio de frameworks como Spring e Spring Boot, integração de banco de dados com Spring Data JPA e implementação de segurança com Spring Security. Ensina habilidades em testes unitários com JUnit e Mockito, práticas de TDD e controle de versão com Git. Durante o curso executei a criação de aplicações simples até sistemas complexos, desenvolvem APIs RESTful, gerenciam bancos de dados relacionais, realizam testes automatizados e implementam interfaces de usuário. Além disso, aprendem a configurar projetos em Maven e Gradle, realizar deploy em servidores como Tomcat e monitorizar aplicações em produção, garantindo a segurança e eficiência dos sistemas desenvolvidos.
-    
-  </div>
-</div>
-
-<br>
 
 ## Projetos
 
