@@ -28,54 +28,144 @@ Capacidade de um objeto poder ser referenciado de várias formas, ou seja, é ca
 
 ## Projeto
 
-### Diagramação
+### Diagramação UML
+
+#### Core
 
 ```mermaid
 classDiagram
-  class IAccount {
-    +deposit(value: float)
-    +withdraw(value: float)
-    +transfer(destAccount: IAccount, value: float)
-    +statement()
-  }
+    Client --> BankAccount : owns
+    BankAccount <|-- CheckingAccount
+    BankAccount <|-- SavingsAccount
+    BankAccount --> IAccount : implements
+    Bank o-- Client
+    Bank o-- BankAccount
 
-  class BankAccount {
-    #static int sequentialID = 1
-    #static final int defaultAgency = 1
-    -int bankID
-    -final int accountID
-    -final Client client
-    -float balance
-    +BankAccount(client: Client)
-    +getAccountID(): int
-    +getBankID(): int
-    +setBankID(bankID: int)
-    +getBalance(): float
-    +deposit(value: float)
-    +withdraw(value: float)
-    +transfer(destAccount: IAccount, value: float)
-    #AccountData()
-    +statement()
-    +getClient(): Client
-  }
+    class Client {
+        - String cpf
+        - String name
+        - String password
+        - List BankAccount accounts
+        + String getCpf()
+        + String getName()
+        + void setName(String name)
+        + String getPassword()
+        + void setPassword(String password)
+        + List~BankAccount~ getAccounts()
+        + void addAccount(BankAccount account)
+        + void removeAccount(BankAccount account)
+    }
 
-  class SavingsAccount {
-    -float returnValue
-    +SavingsAccount(client: Client)
-    +statement()
-    +getReturnValue(): float
-    +setReturnValue(monthsAmount: int, adjustment: float)
-  }
+    class BankAccount {
+        <<Abstract>>
+        - static int sequentialID
+        - static final int defaultAgency
+        - int bankID
+        - int accountID
+        - Client client
+        - float balance
+        + void deposit(float value)
+        + void withdraw(float value)
+        + void transfer(IAccount destAccount, float value)
+        + void statement()
+        + void AccountData()
+    }
 
-  class CheckingAccount {
-    +CheckingAccount(client: Client)
-    +statement()
-  }
+    class CheckingAccount {
+        + void statement()
+    }
 
-  IAccount <|.. BankAccount
-  BankAccount <|-- SavingsAccount
-  BankAccount <|-- CheckingAccount
+    class SavingsAccount {
+        - float returnValue
+        + void statement()
+        + float getReturnValue()
+        + void setReturnValue(int monthsAmount, float adjustment)
+    }
+
+    class IAccount {
+        <<Interface>>
+        + void deposit(float value)
+        + void withdraw(float value)
+        + void transfer(IAccount destAccount, float value)
+        + void statement()
+    }
+
+    class Bank {
+        - static List Client  clients
+        - static List BankAccount accounts
+        - static Scanner sc
+        + void main(String[] args)
+        + void CreateFakeData()
+        + void StartMenu()
+        + void LoginMenu()
+        + void ClientMenu(Client client)
+        + void AccountMenu(IAccount account)
+        + void AccountOperations(IAccount account, String selectedOption)
+        + BankAccount SearchForAccount(int bankAgency, int accountNumber)
+        + void CreateClient()
+    }
 ```
+
+#### UI
+```mermaid
+classDiagram
+class WelcomeFrame {
+        - loginButton: JButton
+        - registerButton: JButton
+        - closeButton: JButton
+        --
+        + WelcomeFrame()
+    }
+
+    class RegisterFrame {
+        - cpfField: JTextField
+        - nameField: JTextField
+        - passwordField: JPasswordField
+        - registerButton: JButton
+        - goBackButton: JButton
+        --
+        + RegisterFrame()
+        - registerClient(name: String, cpf: String, password: String): void
+    }
+
+    class LoginFrame {
+        - cpfField: JTextField
+        - passwordField: JPasswordField
+        - loginButton: JButton
+        - goBackButton: JButton
+        --
+        + LoginFrame()
+        - verifyLogin(cpf: String, password: String): void
+    }
+
+
+    class AccountSelectionFrame {
+        - accountList: JList<String>
+        - selectButton: JButton
+        - goBackButton: JButton
+        --
+        + AccountSelectionFrame(client: Client)
+    }
+
+    class MainMenuFrame {
+        - viewAccountsButton: JButton
+        - logoutButton: JButton
+        --
+        + MainMenuFrame(client: Client)
+    }
+
+    class AccountOperationsFrame {
+        - account: BankAccount
+        - balanceLabel: JLabel
+        - depositButton: JButton
+        - withdrawButton: JButton
+        - transferButton: JButton
+        - backButton: JButton
+        --
+        + AccountOperationsFrame(account: BankAccount)
+    }
+```
+
 
 ### Implementação
 
@@ -241,4 +331,30 @@ public interface IAccount {
 ```
 
 ### Extra - Interface
+
+#### Wellcome Screen
+
+<img width="251" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/181fb457-b773-4b17-a634-a1b7b468c830">
+
+#### Cadastro de Cliente
+
+<img width="219" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/02053193-d528-4e26-b484-872d3ac35d16">
+
+#### Login
+
+<img width="241" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/53cd8e4f-0e61-45b5-9003-183956720ed7">
+
+#### Menu de Usuário
+
+<img width="235" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/07ea45f5-bc82-40b1-9385-f64bc3d98182">
+
+#### Seleção de Conta
+
+<img width="224" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/c66ec050-f6d1-4670-bbfd-360c9765149a">
+
+#### Menu de operações financeiras
+
+<img width="230" alt="image" src="https://github.com/OsmarBaia/dio-formacao-java-developer/assets/88497805/8c19ae18-289e-43a3-ba4c-fcb8a4c35622">
+
+
 
