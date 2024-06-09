@@ -109,9 +109,9 @@ classDiagram
         +closeWebsite()
     }
 
-    iPhone  <|.. MusicPlayer
-    iPhone <|.. Phone
-    iPhone  <|.. InternetBrowser
+    MusicPlayer <|.. iPhone
+    Phone  <|.. iPhone
+    InternetBrowser  <|.. iPhone
 
 ```
 
