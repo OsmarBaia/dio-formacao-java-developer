@@ -56,9 +56,9 @@ classDiagram
     class iPhone {
     }
 
-    ReprodutorMusical -->  iPhone
-    AparelhoTelefonico  --> iPhone
-    NavegadorInternet  --> iPhone
+   iPhone  -->   ReprodutorMusical
+    iPhone  -->  AparelhoTelefonico
+    iPhone  -->  NavegadorInternet
 ```
 
 ### Instruções
