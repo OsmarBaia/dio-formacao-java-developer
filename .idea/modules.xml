@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/br.com.dio.desafio/br.com.dio.desafio.iml" filepath="$PROJECT_DIR$/br.com.dio.desafio/br.com.dio.desafio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dio-formacao-java-developer.iml" filepath="$PROJECT_DIR$/.idea/dio-formacao-java-developer.iml" />
+    </modules>
+  </component>
+</project>
