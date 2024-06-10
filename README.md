@@ -4,6 +4,9 @@
 
 ## 4️⃣ Criando um Banco Digital com Java e Orientação a Objetos
 
+Nesse desafio de projeto, foi pedido que se implementasse um sistema bancário simples utilizando a linguagem Java. O código consiste em várias classes representando diferentes tipos de contas bancárias: BankAccount, SavingsAccount e CheckingAccount, além de uma interface IAccount. A classe abstrata BankAccount implementa a interface IAccount e fornece métodos para operações comuns, como depósito, saque, transferência e emissão de extratos. As subclasses SavingsAccount e CheckingAccount estendem BankAccount, implementando funcionalidades específicas para contas de poupança e correntes, respectivamente. Exceções customizadas são utilizadas para manejar erros, como tentativas de depósito ou saque de valores negativos, ou saques superiores ao saldo disponível.
+
+
 <br><br><br>
 
 ## O Que deve ser utilizado
